@@ -11,7 +11,7 @@ original program and created a website using the django web framework and that's
 
 
 I never published it, so you'd need to set up a django development environemt to actually run the 
-site on a local development server. I never really thought about sharing it when I was developing it so theres probably some
+site on a local development server. I never really thought about sharing it when I was developing it so there could be some
 bugs/hiccups I'm not anticipating, but if you have the right environment you can get it going by doing the following:
 
 ### from the root directory 
