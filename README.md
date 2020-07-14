@@ -15,7 +15,9 @@ site on a local development server. I never really thought about sharing it when
 bugs/hiccups I'm not anticipating, but if you have the right environment you can get it going by doing the following:
 
 #from the root directory 
-> source bin/activate
+'''bash
+source bin/activate
+bash
 #Now the virtual environment should be running and you can activate the server 
 > cd src
 > python3 manage.py runserver
