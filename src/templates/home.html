@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h6 style="font-family:courier">Hello! Enter a location you wish to travel to (City or Neighborhood)</h6>
+
+<!--
+<form action='/result' method='POST'>{% csrf_token %}
+  to recieve information on the location: <input type="text" name = "Destination"><br>
+  <input type="submit" value="Search">
+</form>
+-->
+
+<form action="/result" method="post">{% csrf_token %}
+  <div class="input-group mb-3">
+    <input id="destination" type="text" name="destination" required>
+    <div class="input-group-append">
+      <button type="submit", name="save" class="btn btn-success">
+        <span class="spinner-border spinner-border-sm"></span> Search
+      </button>
+    </div>
+  </div>
+<!--
+  <label for="destination">Destination: </label>
+  <input id="destination" type="text" name="destination">
+  <input type="submit" value="OK">
+  -->
+</form>
+
+{% if failed_search %}
+  <li style="font-family:courier"> I am afraid that search yield no results </li>
+{%  endif %}
+
+{% endblock %}

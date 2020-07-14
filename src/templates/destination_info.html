@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+  <h2 style="font-family:courier">{{ city_name }}</h2>
+  <div id="map-container-google-1" class="z-depth-1-half map-container" style="height: 500p">
+    <iframe src='https://maps.google.com/maps?q={{ city_name }}&t=&z=13&ie=UTF8&iwloc=&output=embed' frameborder="0"
+    style="border:0" allowfullscreen></iframe>
+  </div>
+  <br></br>
+
+  <div class="row">
+    <div class="col-md-6">
+      <h6 class="font-weight-bold" style="font-family:courier">Entertainment</h6>
+      <ul class="list-group">
+        <li class="list-group-item">Popularity rating: {{popularity_rating}}/5.00</li>
+        <li class="list-group-item">Night life rating: {{night_life_rating}}/5.00</li>
+      </ul>
+    </div>
+    <div class="col-md-6">
+      <h6 class="font-weight-bold" style="font-family:courier">Weather</h6>
+      <ul class="list-group">
+        <li class="list-group-item">{{ current_weather }}</li>
+        <li class="list-group-item">{{ week_weather }}</li>
+      </ul>
+    </div>
+  </div>
+
+  <br></br>
+
+  <div class="row">
+    <div class="col-md-6">
+      <h6 class="font-weight-bold" style="font-family:courier">Best Restaurants</h6>
+      <div class="list-group ul-right">
+        {% for my_sub_item in best_restaurant_list %}
+          <a href='https://www.google.com/search?q={{ my_sub_item }}' target="_blank" class="list-group-item list-group-item-action">{{ my_sub_item }}</a>
+        {% endfor %}
+      </div>
+    </div>
+    <div class="col-md-6">
+      <h6 class="font-weight-bold" style="font-family:courier">Top Cuisines</h6>
+      <ul class="list-group">
+        {% for my_sub_item in cuisine_list %}
+          <li class="list-group-item">{{ my_sub_item }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+
+
+
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+<form action="/info" method="post">{% csrf_token %}
+  <h6 style="font-family:courier">Select Correct Result:</h6>
+  <div class="form-group mb-3">
+    <div class="w-50">
+      <select class="form-control" name="city">
+        {% for my_sub_item in result_list %}
+        <option value ='{{ forloop.counter }} {{ my_sub_item }}'>{{ my_sub_item }}</option>
+        {% endfor %}
+      </select>
+    </div>
+  </div>
+  <div class="form-group-prepend">
+    <input class="btn btn-success" type="submit" value="Submit">
+  </div>
+  </form>
+
+{% endblock %}
