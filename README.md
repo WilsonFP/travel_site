@@ -14,10 +14,8 @@ I never published it, so you'd need to set up a django development environemt to
 site on a local development server. I never really thought about sharing it when I was developing it so theres probably some
 bugs/hiccups I'm not anticipating, but if you have the right environment you can get it going by doing the following:
 
-from the root directory 
-'''bash
-source bin/activate
-bash
+#from the root directory 
+>source bin/activate
 #Now the virtual environment should be running and you can activate the server 
 > cd src
 > python3 manage.py runserver
